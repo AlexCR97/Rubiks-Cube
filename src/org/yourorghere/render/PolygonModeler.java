@@ -12,7 +12,7 @@ public class PolygonModeler {
     
     public final Point3d origin = new Point3d(0, 0, -10);
     public final Point3d rotation = new Point3d(0, 0, 0);
-    public float angleStep = 1f;
+    public float angleStep = 0.5f;
     public float angle = 0;
     
     public void modelCube(GL gl, Cube cube) {
@@ -159,23 +159,25 @@ public class PolygonModeler {
         rotation.x += angleStep;
         rotation.y = 45;
         //rotation.y += angleStep;
-        //rotation.z += angleStep;
+        rotation.z += angleStep;
         
         // Rotate faces
         //cube.rotateFront(angleStep);
-        //cube.rotateBack(angleStep * 1.5f);
-        cube.rotateLeft(-angleStep);
-        cube.rotateRight(angleStep);
+        //cube.rotateBack(angleStep);
+        //cube.rotateLeft(angleStep);
+        //cube.rotateRight(angleStep);
         //cube.rotateTop(angleStep);
         //cube.rotateBottom(angleStep);
         
-        // Set rotation face
-        //cube.setRotationFront(180);
-        //cube.setRotationBack(180);
-        //cube.setRotationLeft(180);
-        //cube.setRotationRight(180);
-        //cube.setRotationTop(180);
-        //cube.setRotationBottom(180);
+        // SET ROTATION FACES
+        
+        // Chess like
+        cube.setRotationFront(180);
+        cube.setRotationBack(180);
+        cube.setRotationLeft(180);
+        cube.setRotationRight(180);
+        cube.setRotationTop(180);
+        cube.setRotationBottom(180);
         
         // front
         for (Cube c : cube.front) {

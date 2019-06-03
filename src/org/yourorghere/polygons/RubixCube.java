@@ -109,33 +109,33 @@ public class RubixCube {
     
     public void rotateFront(float angle) {
         for (Cube c : front)
-            c.rotation.z = Utils.clamp(c.rotation.z + angle, -360, 360);
+            c.rotation.z = Utils.clamp(c.rotation.z + angle, 0, 359);
     }
     
     public void rotateBack(float angle) {
         for (Cube c : back)
-            c.rotation.z = Utils.clamp(c.rotation.z + angle, -360, 360);
+            c.rotation.z = Utils.clamp(c.rotation.z + angle, 0, 359);
     }
     
     public void rotateLeft(float angle) {
         for (Cube c : left)
-            c.rotation.x = Utils.clamp(c.rotation.x + angle, -360, 360);
+            c.rotation.x = Utils.clamp(c.rotation.x + angle, 0, 359);
     }
     
     public void rotateRight(float angle) {
         for (Cube c : right)
-            c.rotation.x = Utils.clamp(c.rotation.x + angle, -360, 360);
+            c.rotation.x = Utils.clamp(c.rotation.x + angle, 0, 359);
     }
     
     public void rotateTop(float angle) {
         for (Cube c : top) {
-            c.rotation.y = Utils.clamp(c.rotation.y + angle, -360, 360);
+            c.rotation.y = Utils.clamp(c.rotation.y + angle, 0, 359);
         }
     }
     
     public void rotateBottom(float angle) {
         for (Cube c : bottom) {
-            c.rotation.y = Utils.clamp(c.rotation.y + angle, -360, 360);
+            c.rotation.y = Utils.clamp(c.rotation.y + angle, 0, 359);
         }
     }
     
